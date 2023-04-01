@@ -1,0 +1,23 @@
+--Create a clothing store database
+
+CREATE TABLE beyonce (id INTEGER PRIMARY KEY, name TEXT, sold INTEGER, price REAL);
+
+INSERT INTO beyonce VALUES (1, "Shirts", 5, 10.00);
+INSERT INTO beyonce VAlUES (2, "Sweaters", 6, 16.50);
+Insert INTO beyonce VALUES (3, "Shorts", 6, 9.50);
+INSERT INTO beyonce VALUES (4, "Shoes", 8, 30.00);
+INSERT INTO beyonce VALUES (5, "Pants", 4, 35.00);
+
+--display the database ordered by price. 
+SELECT * FROM beyonce;
+SELECT name, sold, price FROM beyonce ORDER BY price DESC;
+
+--what is the avg price of items in the store? 
+SELECT AVG(price) "avg item price"
+FROM beyonce
+
+--what are the most 5 popular items? 
+SELECT item, price, popularity
+FROM beyonce
+order by popularity desc
+limit 5; 
